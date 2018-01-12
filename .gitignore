@@ -3,6 +3,7 @@ acmthm.sty
 acmart.pdf
 acmguide.pdf
 sample-*.pdf
+*.pdf
 *.log
 *.aux
 *.cfg
@@ -25,4 +26,5 @@ sample-*.pdf
 *.tgz
 *.zip
 *.rpi
+*.synctex.gz
 *~

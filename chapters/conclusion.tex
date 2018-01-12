@@ -1,9 +1,12 @@
 \section{Conclusion}
-\subsection{Future works}
-In many cases, the sentiment class of a sentence can only be revealed through multiple steps of induction and deduction on a knowledge base.
-We suspected that most of the networks we have done experiments with (e.g. Tree-LSTMs, CNN-multichannel and our model) do the sentiment classification task based on detecting features and do not rely on induction or deduction.
-We thinks that most of the knowledge these models have is embedded in their word embeddings (which have 6,255,600 parameters or double that number in case of two input channels compared to 722,153 parameters at most in these neural networks).
+In this paper, we introduced a combination of Recursive Neural Network and Convolution Neural Network for sentence-level sentiment analysis.
+We experimented with both tree-structured and sequential Recursive Neural Networks.
+Using Standford Sentiment Treebank, we demonstrated that Recurrent or Recursive Neural Networks can be used for combining phrase-level features produced by Convolution Neural Networks.
+Our experiments show that these combinations outperform most pure Convolution, Recurrent and Recursive Neural Networks.
+These results provide further support for the hypothesis that the usage of Recurrent or Recursive Neural Networks is better than k-max-pooling layer in the respect of preserving features' position information and capturing long-range dependencies between features.
 
-In recent years, Recurrent Neural Networks with external memory~\cite{Graves_Nature2016}~\cite{neural-turing-machine} have come into sight.
-DNC~\cite{Graves_Nature2016} was proved to have certain level of reasoning on the bAbI dataset~\cite{bAbi}.
-We hope that we can apply this reasoning ability on sentence-level sentiment analysis.
+Additionally, in an attempt to improve vector presentations of words, we trained Glove vectors on the gigantic Amazon Reviews dataset (Glove Amazon).
+We have demonstrated Glove Amazon is good for these models on the binary setting but can be harmful to them in the fine-grained setting.
+Our experiments also show that a combination of both Glove Amazon and the standard Glove is more beneficial for CNN-Tree-LSTM compared to CNN-LSTM as 2-channel CNN-Tree-LSTM outperforms 2-channel CNN-LSTM on both binary and fine-grained setting.
+
+
